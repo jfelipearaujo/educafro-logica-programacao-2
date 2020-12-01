@@ -1,0 +1,42 @@
+<!-- área para fazer desenho, como uma tela de um pintor -->
+<canvas width="1000" height="1000"></canvas>
+
+<script>
+  const cores = {
+    BRANCO: "white",
+    PRETO: "black",
+  };
+
+  var tela = document.querySelector("canvas");
+  var pincel = tela.getContext("2d");
+
+  function desenharEsquadro(xa, ya, xc, yc) {
+    pincel.fillStyle = cores.PRETO;
+    pincel.beginPath();
+    pincel.moveTo(xa, ya);
+    pincel.lineTo(xa, yc);
+    pincel.lineTo(xc, yc);
+    pincel.fill();
+
+    var xa2 = xa + 50;
+    var ya2 = ya + 125;
+    var xc2 = xc - 125;
+    var yc2 = yc - 50;
+
+    pincel.fillStyle = cores.BRANCO;
+    pincel.beginPath();
+    pincel.moveTo(xa2, ya2);
+    pincel.lineTo(xa2, yc2);
+    pincel.lineTo(xc2, yc2);
+    pincel.fill();
+
+    // pincel.fillStyle = cores.BRANCO;
+    // pincel.beginPath();
+    // pincel.moveTo((6 * xa + xc) / 7, (9 * ya + 5 * yc) / 14);
+    // pincel.lineTo((6 * xa + xc) / 7, (ya + 6 * yc) / 7);
+    // pincel.lineTo((5 * xa + 9 * xc) / 14, (ya + 6 * yc) / 7);
+    // pincel.fill();
+  }
+
+  desenharEsquadro(50, 50, 400, 400);
+</script>

@@ -1,0 +1,33 @@
+<!-- área para fazer desenho, como uma tela de um pintor -->
+<canvas width="600" height="400"></canvas>
+
+<script>
+  const cores = {
+    CINZA_CLARO: "lightgrey",
+    BRANCO: "white",
+    PRETO: "black",
+  };
+
+  var tela = document.querySelector("canvas");
+  var pincel = tela.getContext("2d");
+
+  // *** tela de fundo
+  pincel.fillStyle = cores.CINZA_CLARO;
+  pincel.fillRect(0, 0, 600, 400);
+
+  // ****** desenhar o triângulo #1
+  pincel.fillStyle = cores.PRETO;
+  pincel.beginPath();
+  pincel.moveTo(50, 50);
+  pincel.lineTo(50, 400);
+  pincel.lineTo(400, 400);
+  pincel.fill();
+
+  // ****** desenhar o triângulo #2
+  pincel.fillStyle = cores.BRANCO;
+  pincel.beginPath();
+  pincel.moveTo(100, 175);
+  pincel.lineTo(100, 350);
+  pincel.lineTo(275, 350);
+  pincel.fill();
+</script>

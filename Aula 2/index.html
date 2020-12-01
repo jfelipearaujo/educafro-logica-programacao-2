@@ -1,0 +1,41 @@
+<canvas width="1000" height="400"></canvas>
+
+<script>
+  const cores = {
+    VERDE: "green",
+    PRETO: "black",
+    VERMELHO: "red",
+    AZUL: "blue",
+  };
+
+  var tela = document.querySelector("canvas");
+  var pincel = tela.getContext("2d");
+
+  function desenharQuadrado(x, y, largura, altura, cor, corBorda) {
+    pincel.fillStyle = cor;
+    pincel.fillRect(x, y, largura, altura);
+    pincel.fillStroke = corBorda;
+    pincel.strokeRect(x, y, largura, altura);
+  }
+
+  // quadrado = todos os lados iguais
+  var tamanho = 50;
+  var x = 0;
+
+  while (x < 600) {
+    desenharQuadrado(x, 0, tamanho, tamanho, cores.VERDE, cores.PRETO);
+    desenharQuadrado(x, 50, tamanho, tamanho, cores.VERMELHO, cores.PRETO);
+    desenharQuadrado(x, 100, tamanho, tamanho, cores.AZUL, cores.PRETO);
+
+    x += 50;
+  }
+
+  // quadrado = todos os lados iguais
+  // var tamanho = 50;
+
+  // for (var x = 0; x < 600 / 50; x++) {
+  //   desenharQuadrado(x * tamanho, 0, tamanho, tamanho, cores.VERDE, cores.PRETO);
+  //   desenharQuadrado(x * tamanho, 50, tamanho, tamanho, cores.VERMELHO, cores.PRETO);
+  //   desenharQuadrado(x * tamanho, 100, tamanho, tamanho, cores.AZUL, cores.PRETO);
+  // }
+</script>
