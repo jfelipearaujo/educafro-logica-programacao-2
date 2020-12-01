@@ -6,7 +6,17 @@
 Lógica de Programação II
 </h2>
 
+<br>
+
 Neste repositório serão adicionados os códigos referente ao curso Lógica de Programação II e referente as aulas de reforço que foram ministradas.
+
+<br>
+
+Um assunto abordado neste curso é sobre o <b>canvas</b> que é uma API para desenhar utilizando o JavaScript.
+
+Para mais informações sobre essa API, acesse https://developer.mozilla.org/pt-BR/docs/Web/API/CanvasRenderingContext2D
+
+<br><br><br>
 
 > Aulas de reforço
   - Aula 1, 2 e 3 (até atividade 4): https://youtu.be/64Jk-FEWL5A
