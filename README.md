@@ -18,7 +18,7 @@ Neste repositório serão adicionados os códigos referente ao curso Lógica de 
 
 - Como desenhar com o <b>canvas</b>, para mais acesse [este link](https://developer.mozilla.org/pt-BR/docs/Web/API/CanvasRenderingContext2D).
 
-<br><br>
+<br>
 
 Os próximos arquivos serão adicionados conforme forem sendo apresentados para vocês nas nossas lives de aula de reforço.
 
