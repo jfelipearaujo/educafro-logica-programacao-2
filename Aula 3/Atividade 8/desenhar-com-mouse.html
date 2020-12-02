@@ -1,0 +1,49 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+  const cores = {
+    CINZA: "grey",
+    AZUL: "blue",
+  };
+
+  var tela = document.querySelector("canvas");
+  var pincel = tela.getContext("2d");
+
+  pincel.fillStyle = cores.CINZA;
+  pincel.fillRect(0, 0, 600, 400);
+
+  var botaoPressionado = false;
+
+  function desenharCirculo(evento) {
+    if (!botaoPressionado) return;
+
+    var x = evento.pageX - tela.offsetLeft;
+    var y = evento.pageY - tela.offsetTop;
+
+    pincel.fillStyle = cores.AZUL;
+    pincel.beginPath();
+    pincel.arc(x, y, 10, 0, 2 * Math.PI);
+    pincel.fill();
+
+    console.log(`Desenhou em x = ${x} e y = ${y}`);
+  }
+
+  tela.onmousemove = desenharCirculo;
+
+  function definirBotaoPressionado() {
+    botaoPressionado = true;
+  }
+
+  function definirBotaoNaoPressionado() {
+    botaoPressionado = false;
+  }
+
+  // função anônima
+  tela.onmousedown = function () {
+    botaoPressionado = true;
+  };
+
+  tela.onmouseup = function () {
+    botaoPressionado = false;
+  };
+</script>
