@@ -6,11 +6,19 @@
 Lógica de Programação II
 </h2>
 
+<br>
+
 Neste repositório serão adicionados os códigos referente ao curso Lógica de Programação II e referente as aulas de reforço que foram ministradas.
 
-> Aulas de reforço
-  - Aula 1, 2 e 3 (até atividade 4): https://youtu.be/64Jk-FEWL5A
-  
+<p align="center">
+  <h3>Assuntos abordados neste curso</h3>
+</p>
+
+- Como desenhar com o <b>canvas</b>, para mais informações acesse [este link](https://developer.mozilla.org/pt-BR/docs/Web/API/CanvasRenderingContext2D)
+- Repetir códigos automaticamente com o método <b>setInterval</b>, para mais informações acessse [este link](https://developer.mozilla.org/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
+
+<br>
+
 Os próximos arquivos serão adicionados conforme forem sendo apresentados para vocês nas nossas lives de aula de reforço.
 
 Bons estudos!
