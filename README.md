@@ -14,7 +14,8 @@ Neste repositório serão adicionados os códigos referente ao curso Lógica de 
   <h3>Assuntos abordados neste curso</h3>
 </p>
 
-- Como desenhar com o <b>canvas</b>, para mais acesse [este link](https://developer.mozilla.org/pt-BR/docs/Web/API/CanvasRenderingContext2D).
+- Como desenhar com o <b>canvas</b>, para mais informações acesse [este link](https://developer.mozilla.org/pt-BR/docs/Web/API/CanvasRenderingContext2D)
+- Repetir códigos automaticamente com o método <b>setInterval</b>, para mais informações acessse [este link](https://developer.mozilla.org/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
 
 <br>
 
