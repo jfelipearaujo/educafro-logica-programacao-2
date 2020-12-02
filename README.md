@@ -10,8 +10,6 @@ Lógica de Programação II
 
 Neste repositório serão adicionados os códigos referente ao curso Lógica de Programação II e referente as aulas de reforço que foram ministradas.
 
-<br>
-
 <p align="center">
   <h3>Assuntos abordados neste curso</h3>
 </p>
