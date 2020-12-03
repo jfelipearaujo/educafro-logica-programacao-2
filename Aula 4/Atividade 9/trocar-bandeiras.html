@@ -1,0 +1,70 @@
+<!-- área para fazer desenho, como uma tela de um pintor -->
+<canvas width="600" height="400"></canvas>
+
+<script>
+  const cores = {
+    VERDE: "green",
+    AZUL: "darkblue",
+    AMARELO: "yellow",
+    VERMELHO: "red",
+    PRETO: "black",
+  };
+
+  var tela = document.querySelector("canvas");
+  var pincel = tela.getContext("2d");
+
+  function desenharBandeiraBrasil() {
+    // *** tela de fundo
+    pincel.fillStyle = cores.VERDE;
+    pincel.fillRect(0, 0, 600, 400);
+
+    // ****** desenhar o triângulo #1
+    pincel.fillStyle = cores.AMARELO;
+    pincel.beginPath();
+    pincel.moveTo(300, 50);
+    pincel.lineTo(50, 200);
+    pincel.lineTo(550, 200);
+    pincel.fill();
+
+    // ****** desenhar o triângulo #2
+    pincel.fillStyle = cores.AMARELO;
+    pincel.beginPath();
+    pincel.moveTo(50, 200);
+    pincel.lineTo(300, 350);
+    pincel.lineTo(550, 200);
+    pincel.fill();
+
+    // ****** desenhar um circulo
+    pincel.fillStyle = cores.AZUL;
+    pincel.beginPath();
+    pincel.arc(300, 200, 100, 0, 2 * 3.14);
+    pincel.fill();
+  }
+
+  function desenharBandeiraAlemanha() {
+    pincel.fillStyle = cores.PRETO;
+    pincel.fillRect(0, 0, 600, 133);
+
+    pincel.fillStyle = cores.VERMELHO;
+    pincel.fillRect(0, 133, 600, 133);
+
+    pincel.fillStyle = cores.AMARELO;
+    pincel.fillRect(0, 266, 600, 133);
+  }
+
+  var bandeiraExibindo = 0; // 0 = brasil, 1 = alemanha
+
+  function exibirBandeira() {
+    if (bandeiraExibindo == 0) {
+      bandeiraExibindo = 1;
+
+      desenharBandeiraBrasil();
+    } else {
+      bandeiraExibindo = 0;
+
+      desenharBandeiraAlemanha();
+    }
+  }
+
+  setInterval(exibirBandeira, 3 * 1000);
+</script>

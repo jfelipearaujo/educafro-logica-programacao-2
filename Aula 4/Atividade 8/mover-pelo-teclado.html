@@ -1,0 +1,67 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+  const cores = {
+    CINZA_CLARO: "lightgray",
+    CINZA: "grey",
+    AZUL: "blue",
+    VERMELHO: "red",
+    BRANCO: "white",
+  };
+
+  var tela = document.querySelector("canvas");
+  var pincel = tela.getContext("2d");
+
+  var x = 20;
+  var y = 20;
+
+  const teclas = {
+    esquerda: 37,
+    direita: 39,
+    cima: 38,
+    baixo: 40,
+  };
+
+  pincel.fillStyle = cores.CINZA_CLARO;
+  pincel.fillRect(0, 0, 600, 400);
+
+  function desenharCirculo(x, y, raio) {
+    pincel.fillStyle = cores.AZUL;
+    pincel.beginPath();
+    pincel.arc(x, y, raio, 0, 2 * Math.PI);
+    pincel.fill();
+  }
+
+  function limparTela() {
+    pincel.clearRect(0, 0, 600, 400);
+  }
+
+  function atualizarTela() {
+    limparTela();
+    desenharCirculo(x, y, 10);
+  }
+
+  function capturarTeclaPressionada(evento) {
+    switch (evento.keyCode) {
+      case teclas.direita:
+        x++;
+        break;
+      case teclas.esquerda:
+        x--;
+        break;
+      case teclas.cima:
+        y--;
+        break;
+      case teclas.baixo:
+        y++;
+        break;
+
+      default:
+        break;
+    }
+  }
+
+  document.onkeydown = capturarTeclaPressionada;
+
+  setInterval(atualizarTela, 20);
+</script>

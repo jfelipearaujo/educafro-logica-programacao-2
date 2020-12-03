@@ -1,0 +1,80 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+  const cores = {
+    CINZA_CLARO: "lightgray",
+    CINZA: "grey",
+    AZUL: "blue",
+    VERMELHO: "red",
+    BRANCO: "white",
+  };
+
+  var tela = document.querySelector("canvas");
+  var pincel = tela.getContext("2d");
+
+  function limparTela() {
+    pincel.clearRect(0, 0, tela.width, tela.height);
+    pincel.fillStyle = cores.CINZA_CLARO;
+    pincel.fillRect(0, 0, 600, 400);
+  }
+
+  function desenharCirculo(x, y, raio, cor) {
+    pincel.fillStyle = cor;
+    pincel.beginPath();
+    pincel.arc(x, y, raio, 0, 2 * Math.PI);
+    pincel.fill();
+  }
+
+  var raio = 10;
+  var xAlvo = 300;
+  var yAlvo = 200;
+
+  function desenharAlvo() {
+    desenharCirculo(xAlvo, yAlvo, raio + 20, cores.VERMELHO);
+    desenharCirculo(xAlvo, yAlvo, raio + 10, cores.BRANCO);
+    desenharCirculo(xAlvo, yAlvo, raio, cores.VERMELHO);
+
+    console.log(`x = ${xAlvo} | y = ${yAlvo}`);
+  }
+
+  function sortearPosicao() {
+    xAlvo = Math.floor(Math.random() * tela.width);
+    yAlvo = Math.floor(Math.random() * tela.height);
+
+    // Define as bordas do topo e de baixo
+    if (yAlvo < raio + 20) {
+      yAlvo = raio + 20;
+    } else if (yAlvo > tela.height - (raio + 20)) {
+      yAlvo = tela.height - (raio + 20);
+    }
+
+    // Define as bordas das laterais
+    if (xAlvo < raio + 20) {
+      xAlvo = raio + 20;
+    } else if (xAlvo > tela.width - (raio + 20)) {
+      xAlvo = tela.width - (raio + 20);
+    }
+  }
+
+  function desenharAleatorio() {
+    limparTela();
+    sortearPosicao();
+    desenharAlvo();
+  }
+
+  setInterval(desenharAleatorio, 1000);
+
+  function dispara(evento) {
+    var x = evento.pageX - tela.offsetLeft;
+    var y = evento.pageY - tela.offsetTop;
+
+    var acertouEmX = x > xAlvo - raio && x < xAlvo + raio;
+    var acertouEmY = y > yAlvo - raio && y < yAlvo + raio;
+
+    if (acertouEmX && acertouEmY) {
+      alert("Acertou");
+    }
+  }
+
+  tela.onclick = dispara;
+</script>
