@@ -15,6 +15,11 @@ Neste repositório serão adicionados os códigos referente ao curso Lógica de 
 </p>
 
 - Como desenhar com o <b>canvas</b>, para mais informações acesse [este link](https://developer.mozilla.org/pt-BR/docs/Web/API/CanvasRenderingContext2D)
+- Como desenhar círculos com o método <b>arc</b>, para mais informações acesse [este link](https://developer.mozilla.org/pt-BR/docs/Web/API/CanvasRenderingContext2D/arc)
+- Como desenhar quadrados ou retângulos com o método <b>fillRect</b>, para mais informações acesse [este link](https://developer.mozilla.org/pt-BR/docs/Web/API/CanvasRenderingContext2D/fillRect)
+- Como desenhar triângulos com os métodos <b>moveTo</b> e <b>lineTo</b>, para mais informações acesse [este link](https://developer.mozilla.org/pt-BR/docs/Web/API/CanvasRenderingContext2D/moveTo) e [este link](https://developer.mozilla.org/pt-BR/docs/Web/API/CanvasRenderingContext2D/lineTo)
+- Como desenhar textos na tela com o método <b>fillText</b>, para mais informações acesse [este link](https://developer.mozilla.org/pt-BR/docs/Web/API/CanvasRenderingContext2D/fillText)
+- Como criar bordas com a propriedade <b>strokeStyle</b> e o método <b>strokeRect</b>, para mais informações acesse [este link](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle)
 - Repetir códigos automaticamente com o método <b>setInterval</b>, para mais informações acessse [este link](https://developer.mozilla.org/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
 
 <br>
